@@ -95,13 +95,13 @@
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言css的不足&amp;emsp;&amp;emsp;作为前端界的三大基石，css是每一个前端开发人员必须要会的，css作为一门标记语言，给人的第一印象就是简单易懂，没有什么逻辑性，和编程语言差距较大，短板非常明显，当有新的属性出来时个浏览器也不能同时兼容，为了解决css这个短板，涌现出了一些预处理语言，他们让css可以使用变量，循环，集成，自定义方法等，让其逻辑性大大加增强。 预处理语言&amp;emsp;&amp;emsp">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/06/20/test/media/15296481033009.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/06/20/test/media/15296485417885.jpg">
-<meta property="og:updated_time" content="2018-06-22T06:33:22.437Z">
+<meta property="og:image" content="http://yoursite.com/img/15296481033009.jpg">
+<meta property="og:image" content="http://yoursite.com/img/15296485417885.jpg">
+<meta property="og:updated_time" content="2018-06-22T06:42:11.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less小入门">
 <meta name="twitter:description" content="前言css的不足&amp;emsp;&amp;emsp;作为前端界的三大基石，css是每一个前端开发人员必须要会的，css作为一门标记语言，给人的第一印象就是简单易懂，没有什么逻辑性，和编程语言差距较大，短板非常明显，当有新的属性出来时个浏览器也不能同时兼容，为了解决css这个短板，涌现出了一些预处理语言，他们让css可以使用变量，循环，集成，自定义方法等，让其逻辑性大大加增强。 预处理语言&amp;emsp;&amp;emsp">
-<meta name="twitter:image" content="http://yoursite.com/2017/06/20/test/media/15296481033009.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/15296481033009.jpg">
 
 
 
@@ -398,12 +398,10 @@
 <p>lighten 提高亮度<br>darken 降低亮度</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@bgc:#ff6600;</span><br><span class="line"><span class="selector-class">.box</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>:@bgc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    background: lighten(@bgc,20%); //亮度提高百分之二十</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    background: darken(@bgc,20%);//亮度减少百分之二十</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="media/15296481033009.jpg" alt=""></p>
-<blockquote>
+<p><img src="/img/15296481033009.jpg" alt="img"></p>
 <p>saturate 提高饱和度<br>desaturate 降低饱和度</p>
-</blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@bgc: skyblue;</span><br><span class="line"><span class="selector-class">.box</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>:@bgc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    background: saturate(@bgc,100%); //饱和度提高百分之一百</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    background: desaturate(@bgc,100%);//饱和度减少百分之一百</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="media/15296485417885.jpg" alt=""></p>
+<p><img src="/img/15296485417885.jpg" alt="img"></p>
 <blockquote>
 <p>percentage 转换百分比<br>unit 单位联合<br>ceil 向上取整<br>floor 向下取整<br>round 四舍五入<br>abs 绝对值</p>
 </blockquote>
