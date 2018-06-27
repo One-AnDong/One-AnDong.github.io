@@ -503,7 +503,7 @@
       
         
           
-            <h1 id="vue中v-cloak解读"><a href="#vue中v-cloak解读" class="headerlink" title="vue中v-cloak解读"></a>vue中v-cloak解读</h1><p>##v-cloak 的作用和用法<br>用法：</p>
+            <h1 id="vue中v-cloak解读"><a href="#vue中v-cloak解读" class="headerlink" title="vue中v-cloak解读"></a>vue中v-cloak解读</h1><h2 id="v-cloak-的作用和用法"><a href="#v-cloak-的作用和用法" class="headerlink" title="v-cloak 的作用和用法"></a>v-cloak 的作用和用法</h2><p>用法：</p>
 <blockquote>
 <p>这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。官方API</p>
 </blockquote>
@@ -515,7 +515,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[v-cloak] &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在 html 中的加载点加上 v-cloak，就可以解决这一问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot; v-cloak&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>##为什么我用的 v-cloak 无效？<br>在实际项目中，我们常通过 @import 来加载 css 文<br>件</p>
+<h2 id="为什么我用的-v-cloak-无效？"><a href="#为什么我用的-v-cloak-无效？" class="headerlink" title="为什么我用的 v-cloak 无效？"></a>为什么我用的 v-cloak 无效？</h2><p>在实际项目中，我们常通过 @import 来加载 css 文<br>件</p>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;style.css&quot;</span><br><span class="line">@import &quot;index.css&quot;</span><br></pre></td></tr></table></figure>
 <p>而 @import 是在页面 DOM 完全载入后才会进行加载，如果我们将 [v-cloak] 写在 @import 加载的 css 文件中，就会导致页面仍旧闪烁。</p>
