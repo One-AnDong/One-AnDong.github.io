@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="前言前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset">
+<meta name="description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
 <meta name="keywords" content="学习记录,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用知识点记录">
 <meta property="og:url" content="http://yoursite.com/2017/05/08/2018-08-26/index.html">
 <meta property="og:site_name" content="Share and Create">
-<meta property="og:description" content="前言前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset">
+<meta property="og:description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T08:29:02.542Z">
+<meta property="og:updated_time" content="2018-08-27T08:33:29.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用知识点记录">
-<meta name="twitter:description" content="前言前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset">
+<meta name="twitter:description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
 
 
 
@@ -355,7 +355,7 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h1><p>git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录</p>
 <h3 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h3><ul>
 <li>git init 初始化</li>
 <li>git add  添加文件到暂存区</li>
@@ -387,22 +387,13 @@
 <li>已提交到暂存区的文件使用git reset HEAD file 退回到工作区，再使用git checkout – file 恢复和版本库一样的状态再使用git checkout – file 恢复到版本库一样的状态</li>
 </ol>
 <h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>直接在使用文件管理器删除文件，或者用命令行删除。<br>删除完后使用git rm file指令确认从版本库中删除文件，再使用commit到版本库。如果是误删文件，使用git checkout – file 恢复  </p>
-<h3 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h3><pre><code>创建xxx分支
-git branch xxx
-
-切换到xxx分支
-git checkout xxx
-
-删除xxx分支
-git branch -d xxx
-
-强制删除xxx分支
-git branch -D xxx
-</code></pre><h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>手动解决冲突，修改冲突</p>
-<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><pre><code>使用--no-ff模式合并分支，git默认使用fast forward 模式进行合并，这样导致无法查看分支信息
-故我们可以禁用fast forward模式，也就是说我们在合并分支的时候使用加上--no-ff选项，相当于一次提交
-git merge --no-ff -m&apos;合并dev&apos; dev
-</code></pre><h3 id="开发功能"><a href="#开发功能" class="headerlink" title="开发功能"></a>开发功能</h3><p>接到一个新功能时，我们首先可以创建一个功能分支<br>使用git checkout feature -b 这是句指令相当于以下两步</p>
+<h3 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h3><p>创建xxx分支<br>git branch xxx</p>
+<p>切换到xxx分支<br>git checkout xxx</p>
+<p>删除xxx分支<br>git branch -d xxx</p>
+<p>强制删除xxx分支<br>git branch -D xxx</p>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>手动解决冲突，修改冲突</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>使用–no-ff模式合并分支，git默认使用fast forward 模式进行合并，这样导致无法查看分支信息<br>故我们可以禁用fast forward模式，也就是说我们在合并分支的时候使用加上–no-ff选项，相当于一次提交<br>git merge –no-ff -m’合并dev’ dev</p>
+<h3 id="开发功能"><a href="#开发功能" class="headerlink" title="开发功能"></a>开发功能</h3><p>接到一个新功能时，我们首先可以创建一个功能分支<br>使用git checkout feature -b 这是句指令相当于以下两步</p>
 <ul>
 <li>git branch feature</li>
 <li>git checkout feature</li>
@@ -425,24 +416,13 @@ git merge --no-ff -m&apos;合并dev&apos; dev
 <li>恢复工作状态，并删除保存的工作状态</li>
 </ul>
 <p>保存当前工作状态使用git stash,这个指令可以把当前的工作存放起来，当你在开发一个新需求开发一半的时候需要修改版本的bug，这时候你还没有开发完，所以你需要保存好当前开发现场，在新建一个临时分支，在临时分支上修改bug，修改完之后合并到dev分支上</p>
-<h3 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h3><pre><code>拉去远程仓库到本地，url为仓库地址
-git clone url
+<h3 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h3><p>拉去远程仓库到本地，url为仓库地址<br>git clone url</p>
+<p>查看远程仓库信息<br>git remote/git remote -v</p>
+<p>创建远程分支dev<br>git checkout -b dev origin/dev</p>
+<p>提交到远程仓库origin 的 xxx分支<br>git push origin xxx</p>
+<p>本地dev分支关联远程dev分支，设置好才能pull<br>git –set-upstream-to=origin/dev dev</p>
+<p>获取远程仓库更新<br>git pull</p>
 
-查看远程仓库信息
-git remote/git remote -v
-
-创建远程分支dev
-git checkout -b dev origin/dev
-
-提交到远程仓库origin 的 xxx分支
-git push origin xxx
-
-本地dev分支关联远程dev分支，设置好才能pull
-git --set-upstream-to=origin/dev dev
-
-获取远程仓库更新
-git pull
-</code></pre>
       
     </div>
 
@@ -689,7 +669,7 @@ git pull
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言-1"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">2.0.1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">2.0.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件撤销修改"><span class="nav-number">2.0.3.</span> <span class="nav-text">文件撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">2.0.4.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">2.0.5.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决冲突"><span class="nav-number">2.0.6.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">2.0.7.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发功能"><span class="nav-number">2.0.8.</span> <span class="nav-text">开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改bug"><span class="nav-number">2.0.9.</span> <span class="nav-text">修改bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多人协作"><span class="nav-number">2.0.10.</span> <span class="nav-text">多人协作</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">1.0.1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">1.0.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件撤销修改"><span class="nav-number">1.0.3.</span> <span class="nav-text">文件撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">1.0.4.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.0.5.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.0.6.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">1.0.7.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发功能"><span class="nav-number">1.0.8.</span> <span class="nav-text">开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改bug"><span class="nav-number">1.0.9.</span> <span class="nav-text">修改bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多人协作"><span class="nav-number">1.0.10.</span> <span class="nav-text">多人协作</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
