@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,20 +87,16 @@
 
 
 
-<meta name="description" content="前言　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。 正文　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。　　从左边到右边">
-<meta name="keywords" content="css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="css画三角形">
-<meta property="og:url" content="http://yoursite.com/2017/03/21/css画三角形/index.html">
+<meta name="description" content="江畔何人初见月，江月何时初照人">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Share and Create">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Share and Create">
-<meta property="og:description" content="前言　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。 正文　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。　　从左边到右边">
+<meta property="og:description" content="江畔何人初见月，江月何时初照人">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/img/sj.png">
-<meta property="og:updated_time" content="2018-06-21T02:32:22.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css画三角形">
-<meta name="twitter:description" content="前言　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。 正文　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。　　从左边到右边">
-<meta name="twitter:image" content="http://yoursite.com/img/sj.png">
+<meta name="twitter:title" content="Share and Create">
+<meta name="twitter:description" content="江畔何人初见月，江月何时初照人">
 
 
 
@@ -128,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/21/css画三角形/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title> css画三角形 | Share and Create </title>
+  <title> Share and Create </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -159,7 +155,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,9 +250,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -284,7 +282,10 @@
             
             
               
-                css画三角形
+                
+                <a class="post-title-link" href="/2017/03/21/css画三角形/" itemprop="url">
+                  css画三角形
+                </a>
               
             
           </h1>
@@ -357,7 +358,9 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。</p>
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。<br><img src="/img/sj.png" alt="img"><br>　　从左边到右边，div的宽高逐渐减小，我们可以看到，当宽高为0时，出现了4个三角形，代码我就不贴了。下面我写了个小demo可以做参考。</p>
 <p>　　实心三角形：</p>
 <pre>
@@ -446,76 +449,46 @@
 </pre>
 
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/css/" rel="tag"># css</a>
-          
-        </div>
+
       
 
       
-        
-      
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/28/心得20170228/" rel="next" title="前言">
-                <i class="fa fa-chevron-left"></i> 前言
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/08/2018-08-26/" rel="prev" title="git常用知识点记录">
-                git常用知识点记录 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -523,10 +496,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -546,17 +515,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -681,22 +641,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#demo完整代码"><span class="nav-number">3.</span> <span class="nav-text">demo完整代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">4.</span> <span class="nav-text">效果</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -814,10 +758,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 

@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vue.js,学习记录," />
+  <meta name="keywords" content="javascript,前端," />
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="前言学前感想前端界的三大框架，Angular、react、vue，这次我选择了vue来学习主要有几个原因，一是vue学习成本低，容易上手，加上vue的文档写的很完整，github上的学习资源也比较多，所以学习vue是一个不错的选择，当然我也建议专注js和css，现在大前端时代层出不穷的新技术，其实也就是这两个基础上的提升，想学好框架基础一定要抓。这一篇博文将会长期更新，作为写文章新手，如有写的不好">
-<meta name="keywords" content="vue.js,学习记录">
+<meta name="description" content="前言前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈 正文判断对象的类型&amp;emsp;&amp;emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toStrin">
+<meta name="keywords" content="javascript,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue.js学习记录">
-<meta property="og:url" content="http://yoursite.com/2017/09/28/2018-06-28/index.html">
+<meta property="og:title" content="原生js杂谈">
+<meta property="og:url" content="http://yoursite.com/2017/08/20/原生js杂谈md/index.html">
 <meta property="og:site_name" content="Share and Create">
-<meta property="og:description" content="前言学前感想前端界的三大框架，Angular、react、vue，这次我选择了vue来学习主要有几个原因，一是vue学习成本低，容易上手，加上vue的文档写的很完整，github上的学习资源也比较多，所以学习vue是一个不错的选择，当然我也建议专注js和css，现在大前端时代层出不穷的新技术，其实也就是这两个基础上的提升，想学好框架基础一定要抓。这一篇博文将会长期更新，作为写文章新手，如有写的不好">
+<meta property="og:description" content="前言前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈 正文判断对象的类型&amp;emsp;&amp;emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toStrin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-24T06:38:02.042Z">
+<meta property="og:updated_time" content="2018-09-01T11:03:18.746Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue.js学习记录">
-<meta name="twitter:description" content="前言学前感想前端界的三大框架，Angular、react、vue，这次我选择了vue来学习主要有几个原因，一是vue学习成本低，容易上手，加上vue的文档写的很完整，github上的学习资源也比较多，所以学习vue是一个不错的选择，当然我也建议专注js和css，现在大前端时代层出不穷的新技术，其实也就是这两个基础上的提升，想学好框架基础一定要抓。这一篇博文将会长期更新，作为写文章新手，如有写的不好">
+<meta name="twitter:title" content="原生js杂谈">
+<meta name="twitter:description" content="前言前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈 正文判断对象的类型&amp;emsp;&amp;emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toStrin">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/28/2018-06-28/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/20/原生js杂谈md/"/>
 
 
 
 
 
-  <title> vue.js学习记录 | Share and Create </title>
+  <title> 原生js杂谈 | Share and Create </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/2018-06-28/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/20/原生js杂谈md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="安东">
@@ -282,7 +282,7 @@
             
             
               
-                vue.js学习记录
+                原生js杂谈
               
             
           </h1>
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T16:01:15+08:00">
-                2017-09-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T14:30:02+08:00">
+                2017-08-20
               </time>
             
 
@@ -355,14 +355,17 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="学前感想"><a href="#学前感想" class="headerlink" title="学前感想"></a>学前感想</h2><p>前端界的三大框架，<strong>Angular、react、vue</strong>，这次我选择了vue来学习主要有几个原因，一是vue学习成本低，容易上手，加上vue的文档写的很完整，github上的学习资源也比较多，所以学习vue是一个不错的选择，当然我也建议专注js和css，现在大前端时代层出不穷的新技术，其实也就是这两个基础上的提升，想学好框架基础一定要抓。这一篇博文将会长期更新，作为写文章新手，如有写的不好和错误的地方请直接指出，这会帮助到我很多。</p>
-<h2 id="学习安排"><a href="#学习安排" class="headerlink" title="学习安排"></a>学习安排</h2><p>基础部分通过<a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">官方文档</a>和书籍（<a href="https://www.epubit.com/book/detail/8331" target="_blank" rel="noopener">vue.js前端开发快速入门与专业应用</a>）学习,结合一位关注很久博主做的文字视频教程<a href="http://jspang.com/" target="_blank" rel="noopener">技术胖</a>，作为一种补充你可以学到别人的知识模块。<br>进阶部分通过在github上建立开源项目，通过目前所开放的一些api来做实际项目，已有两个备选方案。<br><a href="https://openapi-doc.faas.ele.me/v2/index.html" target="_blank" rel="noopener">饿了么开放api</a>    </p>
-<p><a href="https://developers.douban.com/wiki/?title=movie_v2#subject" target="_blank" rel="noopener">豆瓣开放api</a></p>
-<h2 id="学习目的"><a href="#学习目的" class="headerlink" title="学习目的"></a>学习目的</h2><p>功利性的学习</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h2><p>v-bind<br>v-model<br>v-html<br>v-text</p>
-<p>v-for<br>v-if<br>v-else<br>v-show</p>
-<p>v-on<br>v-colak</p>
-<h2 id="vue的api"><a href="#vue的api" class="headerlink" title="vue的api"></a>vue的api</h2>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h3 id="判断对象的类型"><a href="#判断对象的类型" class="headerlink" title="判断对象的类型"></a>判断对象的类型</h3><p>&emsp;&emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toString返回的是[object type]，type就是该对象的类型，那么我们使用.call()或者.apply()的调用方式就可以在不同对象类型上使用这个toString，比如下面toString().call(val),这里的toString()是Object.prototype.toString，这样我再进行一些替换和切分操作就可以获得对象的type</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> val = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">toString.call(val).replace(<span class="regexp">/[\[\]]/g</span>,<span class="string">''</span>).split(<span class="string">' '</span>)[<span class="number">1</span>].toLowerCase()</span><br></pre></td></tr></table></figure>
+<h3 id="一个更新states的块"><a href="#一个更新states的块" class="headerlink" title="一个更新states的块"></a>一个更新states的块</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//状态</span></span><br><span class="line">  <span class="keyword">const</span> states = &#123;</span><br><span class="line">    a: <span class="literal">null</span>,</span><br><span class="line">    b: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//获取对应属性的值</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> states.mame</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//获取states对象</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getStates</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> states</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//判断对象类型</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">elem</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (elem == <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> elem + <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> toString.call(elem).replace(<span class="regexp">/[\[\]]/</span>, <span class="string">''</span>).split(<span class="string">' '</span>)[<span class="number">1</span>].toLowerCase()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//设置或更新states</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">set</span>(<span class="params">options, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> keys = <span class="built_in">Object</span>.keys(options)</span><br><span class="line">    <span class="keyword">let</span> o = target ? target : states</span><br><span class="line">    keys.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (o[item] === <span class="literal">undefined</span>) &#123;</span><br><span class="line">        o[item] = options[item]</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        type(o[item]) == <span class="string">'object'</span> ? set(options[item], o[item]) : o[item] = options[item]</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> item</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//通过外部环境保持引用变为公用方法</span></span><br><span class="line">  <span class="built_in">window</span>.get = get</span><br><span class="line">  <span class="built_in">window</span>.getStates = getStates</span><br><span class="line">  <span class="built_in">window</span>.set = set</span><br><span class="line">&#125;)();</span><br><span class="line">set(&#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: &#123;</span><br><span class="line">    name: <span class="string">'joe'</span>,</span><br><span class="line">    age: <span class="number">24</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(getStates())</span><br></pre></td></tr></table></figure>
+<h3 id="url转码"><a href="#url转码" class="headerlink" title="url转码"></a>url转码</h3><p>解码 decodeUrlComponent<br>打码 encodeUrlComponent</p>
+<h3 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h3><blockquote>
+<p>.pop()删除数组最后一个值，返回被删除的值<br>.shift()删除数组第一个值，返回被删除！！的值<br>.push() 在数组最后添加一个值，返回数组长度<br>.unshift() 在数组最前面添加一个值，返回数组长度<br>不改变原来数组:slice(),join(),concat()<br>改变原来数组:pop(),push(),shift(),unshift(),reverse(),splice()</p>
+</blockquote>
+<h3 id="运算符-的转换"><a href="#运算符-的转换" class="headerlink" title="运算符+的转换"></a>运算符+的转换</h3><p>今天在群里有同学提问一个问题，题目是[+[]][+[]]的结果是多少，这个就要联系到+号运算符的隐式转换，在一元运算符中使用加法运算时会把加号后面的值转化成Number类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>([])<span class="comment">//0</span></span><br><span class="line">[+[]][+[]] =&gt; [<span class="number">0</span>][<span class="number">0</span>] =&gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -391,9 +394,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vue-js/" rel="tag"># vue.js</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
-            <a href="/tags/学习记录/" rel="tag"># 学习记录</a>
+            <a href="/tags/前端/" rel="tag"># 前端</a>
           
         </div>
       
@@ -406,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/28/2018-08-20-1/" rel="next" title="函数式编程">
-                <i class="fa fa-chevron-left"></i> 函数式编程
+              <a href="/2017/07/21/webpack小记/" rel="next" title="webpack小记">
+                <i class="fa fa-chevron-left"></i> webpack小记
               </a>
             
           </div>
@@ -416,8 +419,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/03/2018-06-27/" rel="prev" title="vue中v-cloak解读">
-                vue中v-cloak解读 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/01/nginx记录/" rel="prev" title="nginx记录">
+                nginx记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -490,7 +493,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -512,7 +515,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -609,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#学前感想"><span class="nav-number">1.1.</span> <span class="nav-text">学前感想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习安排"><span class="nav-number">1.2.</span> <span class="nav-text">学习安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习目的"><span class="nav-number">1.3.</span> <span class="nav-text">学习目的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue指令"><span class="nav-number">2.1.</span> <span class="nav-text">vue指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue的api"><span class="nav-number">2.2.</span> <span class="nav-text">vue的api</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断对象的类型"><span class="nav-number">2.0.1.</span> <span class="nav-text">判断对象的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个更新states的块"><span class="nav-number">2.0.2.</span> <span class="nav-text">一个更新states的块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url转码"><span class="nav-number">2.0.3.</span> <span class="nav-text">url转码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作"><span class="nav-number">2.0.4.</span> <span class="nav-text">数组操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符-的转换"><span class="nav-number">2.0.5.</span> <span class="nav-text">运算符+的转换</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
