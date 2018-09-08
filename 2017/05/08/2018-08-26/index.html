@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习记录,git," />
+  <meta name="keywords" content="git,学习记录," />
 
 
 
@@ -88,14 +88,14 @@
 
 
 <meta name="description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
-<meta name="keywords" content="学习记录,git">
+<meta name="keywords" content="git,学习记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用知识点记录">
 <meta property="og:url" content="http://yoursite.com/2017/05/08/2018-08-26/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-31T12:04:21.032Z">
+<meta property="og:updated_time" content="2018-09-08T08:05:02.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用知识点记录">
 <meta name="twitter:description" content="前言git常用知识点记录，在团队开发中相信大家都会用到git，下面是一些指令的记录 基础指令 git init 初始化 git add  添加文件到暂存区 git commit 提交暂存区文件到版本库 git status 查看当前仓库状况 git diff 查看修改 git clone 拉取项目  版本回退git reset –hard HEAD^  回退到上一个版本  git reset –h">
@@ -423,6 +423,8 @@
 <p>提交到远程仓库origin 的 xxx分支<br>git push origin xxx</p>
 <p>本地dev分支关联远程dev分支，设置好才能pull<br>git –set-upstream-to=origin/dev dev</p>
 <p>获取远程仓库更新<br>git pull</p>
+<h2 id="github-贡献代码"><a href="#github-贡献代码" class="headerlink" title="github 贡献代码"></a>github 贡献代码</h2><p>1、增加源分支地址到你项目远程分支列表中(此处是关键)，先得将原来的仓库指定为upstream，命令为：<br>git remote add upstream <a href="https://github.com/被fork的仓库.git" target="_blank" rel="noopener">https://github.com/被fork的仓库.git</a><br>此处可使用git remote -v查看远程分支列表<br>2、fetch源分支的新版本到本地<br>   [master]&gt; git fetch upstream<br>3、合并两个版本的代码<br>   [master]&gt; git merge upstream/master<br>将合并后的代码push到github上去</p>
+<h2 id="将分支设置为master（采取再dev分支删除master分支再新建master的方法）"><a href="#将分支设置为master（采取再dev分支删除master分支再新建master的方法）" class="headerlink" title="将分支设置为master（采取再dev分支删除master分支再新建master的方法）"></a>将分支设置为master（采取再dev分支删除master分支再新建master的方法）</h2><p>git branch -D master //删除master分支<br>git checkout -b master //新建master分支<br>所有存在都在dev分支上进行，新建的master分支将于dev分支一样，适合个人管理的小项目，使用注意安全</p>
 
       
     </div>
@@ -452,9 +454,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/学习记录/" rel="tag"># 学习记录</a>
-          
             <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/学习记录/" rel="tag"># 学习记录</a>
           
         </div>
       
@@ -551,7 +553,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -670,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">1.0.1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">1.0.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件撤销修改"><span class="nav-number">1.0.3.</span> <span class="nav-text">文件撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">1.0.4.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.0.5.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.0.6.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">1.0.7.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发功能"><span class="nav-number">1.0.8.</span> <span class="nav-text">开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改bug"><span class="nav-number">1.0.9.</span> <span class="nav-text">修改bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多人协作"><span class="nav-number">1.0.10.</span> <span class="nav-text">多人协作</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">1.0.1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">1.0.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件撤销修改"><span class="nav-number">1.0.3.</span> <span class="nav-text">文件撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">1.0.4.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">1.0.5.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.0.6.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">1.0.7.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发功能"><span class="nav-number">1.0.8.</span> <span class="nav-text">开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改bug"><span class="nav-number">1.0.9.</span> <span class="nav-text">修改bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多人协作"><span class="nav-number">1.0.10.</span> <span class="nav-text">多人协作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github-贡献代码"><span class="nav-number">1.1.</span> <span class="nav-text">github 贡献代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将分支设置为master（采取再dev分支删除master分支再新建master的方法）"><span class="nav-number">1.2.</span> <span class="nav-text">将分支设置为master（采取再dev分支删除master分支再新建master的方法）</span></a></li></ol></li></ol></div>
             
 
           </div>

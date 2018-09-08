@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈 正文判断对象的类型&amp;emsp;&amp;emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toStrin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-01T11:03:18.746Z">
+<meta property="og:updated_time" content="2018-09-06T04:21:15.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生js杂谈">
 <meta name="twitter:description" content="前言前端基础可谓非常重要，这一篇是我对一些原生js的概念和使用上的一些小记录，也就是一些原生js的杂谈，看博文的同学，希望我们可以互相交流哈哈哈 正文判断对象的类型&amp;emsp;&amp;emsp;使用toString()方法进行判断，toString方法是写在Object原型上的，也就是说在默认情况下每一个Object对象都会继承toString方法，如果此方法没有在自定义对象里被覆盖，那么toStrin">
@@ -365,6 +365,9 @@
 </blockquote>
 <h3 id="运算符-的转换"><a href="#运算符-的转换" class="headerlink" title="运算符+的转换"></a>运算符+的转换</h3><p>今天在群里有同学提问一个问题，题目是[+[]][+[]]的结果是多少，这个就要联系到+号运算符的隐式转换，在一元运算符中使用加法运算时会把加号后面的值转化成Number类型</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>([])<span class="comment">//0</span></span><br><span class="line">[+[]][+[]] =&gt; [<span class="number">0</span>][<span class="number">0</span>] =&gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="forEach、map、reduce、filter"><a href="#forEach、map、reduce、filter" class="headerlink" title="forEach、map、reduce、filter"></a>forEach、map、reduce、filter</h3><p>forEach是遍历数组每一项的值，然后让每个值都执行一次回调函数，会改变原数组<br>map 是对数组每一项进行操作，然后返回一个新的数组，，不改变原数组<br>reduce 是利用递归的原理对所有数值进行操作返回一个值<br>filter 是把符合条件的数值给挑选出来，返回一个新数组，不改变原数组，新数组的值是浅拷贝也就是引用传递，可以通过filter来筛选出想操作的值，然后直接对返回的数组进行操作</p>
+<h3 id="set结构做数组去重"><a href="#set结构做数组去重" class="headerlink" title="set结构做数组去重"></a>set结构做数组去重</h3><p>非常简单的方法，直接将数组转化成set结构，然后再将set结构转为数组，Array.from可以将set结构转化为数组结构，当然也可以直接用解构的方式[…new Set(array)]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//去重函数</span><br><span class="line">function dedupe (array) &#123;</span><br><span class="line">  return Array.from(new Set(array))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -493,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -612,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断对象的类型"><span class="nav-number">2.0.1.</span> <span class="nav-text">判断对象的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个更新states的块"><span class="nav-number">2.0.2.</span> <span class="nav-text">一个更新states的块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url转码"><span class="nav-number">2.0.3.</span> <span class="nav-text">url转码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作"><span class="nav-number">2.0.4.</span> <span class="nav-text">数组操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符-的转换"><span class="nav-number">2.0.5.</span> <span class="nav-text">运算符+的转换</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断对象的类型"><span class="nav-number">2.0.1.</span> <span class="nav-text">判断对象的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个更新states的块"><span class="nav-number">2.0.2.</span> <span class="nav-text">一个更新states的块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url转码"><span class="nav-number">2.0.3.</span> <span class="nav-text">url转码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作"><span class="nav-number">2.0.4.</span> <span class="nav-text">数组操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符-的转换"><span class="nav-number">2.0.5.</span> <span class="nav-text">运算符+的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach、map、reduce、filter"><span class="nav-number">2.0.6.</span> <span class="nav-text">forEach、map、reduce、filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set结构做数组去重"><span class="nav-number">2.0.7.</span> <span class="nav-text">set结构做数组去重</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
