@@ -359,97 +359,15 @@
 
       
         
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。<br><img src="/img/sj.png" alt="img"><br>　　从左边到右边，div的宽高逐渐减小，我们可以看到，当宽高为0时，出现了4个三角形，代码我就不贴了。下面我写了个小demo可以做参考。</p>
-<p>　　实心三角形：</p>
-<pre>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*实心三角形*/</span></span><br><span class="line"><span class="selector-id">#triangle</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#333</span>;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#triangle</span><span class="selector-pseudo">:after</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">	<span class="attribute">border-left-color</span>: <span class="number">#333</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">top</span>:<span class="number">30%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</pre>
-
-<p>　　第二个是空心的三角形，其实就是用一个小一点三角形设置颜色为白色，叠加上去。</p>
-<pre>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*空心三角形*/</span></span><br><span class="line"><span class="selector-id">#empty</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#333</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*大三角形*/</span></span><br><span class="line"><span class="selector-id">#empty</span><span class="selector-pseudo">:before</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">	<span class="attribute">border-left-color</span>: <span class="number">#333</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">top</span>:<span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*小三角形*/</span></span><br><span class="line"><span class="selector-id">#empty</span><span class="selector-pseudo">:after</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">8px</span> solid transparent;</span><br><span class="line">	<span class="attribute">border-left-color</span>:<span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">27px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</pre>
-
-<h2 id="demo完整代码"><a href="#demo完整代码" class="headerlink" title="demo完整代码"></a>demo完整代码</h2><pre>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		*</span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			box-sizing: border-box;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">		div</span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">margin-top</span><span class="selector-pseudo">:3px</span>;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="comment">/*实心三角形*/</span></span></span><br><span class="line"><span class="css">		<span class="selector-id">#triangle</span></span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			width: 200px;</span></span><br><span class="line"><span class="undefined">			height: 80px;</span></span><br><span class="line"><span class="undefined">			border-radius: 5px;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">background</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line"><span class="undefined">			position: relative;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-id">#triangle</span><span class="selector-pseudo">:after</span></span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			content: "";</span></span><br><span class="line"><span class="undefined">			border: 10px solid transparent;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">border-left-color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line"><span class="undefined">			position: absolute;</span></span><br><span class="line"><span class="undefined">			left: 100%;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">top</span><span class="selector-pseudo">:30</span>%;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="comment">/*空心三角形*/</span></span></span><br><span class="line"><span class="css">		<span class="selector-id">#empty</span></span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			width: 200px;</span></span><br><span class="line"><span class="undefined">			height: 80px;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">background</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">border</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#333</span>;</span></span><br><span class="line"><span class="undefined">			border-radius: 5px;</span></span><br><span class="line"><span class="undefined">			position: relative;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="comment">/*大三角形*/</span></span></span><br><span class="line"><span class="css">		<span class="selector-id">#empty</span><span class="selector-pseudo">:before</span></span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			content: "";</span></span><br><span class="line"><span class="undefined">			border: 10px solid transparent;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">border-left-color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line"><span class="undefined">			position: absolute;</span></span><br><span class="line"><span class="undefined">			left: 100%;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">top</span><span class="selector-pseudo">:25px</span>;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="comment">/*小三角形*/</span></span></span><br><span class="line"><span class="css">		<span class="selector-id">#empty</span><span class="selector-pseudo">:after</span></span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="undefined">			content: "";</span></span><br><span class="line"><span class="undefined">			border: 8px solid transparent;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">border-left-color</span>:<span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="undefined">			position: absolute;</span></span><br><span class="line"><span class="undefined">			left: 100%;</span></span><br><span class="line"><span class="undefined">			top: 27px;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"triangle"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"empty"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</pre>
-
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><pre>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        *
-        {
-            box-sizing: border-box;
-        }
-        /*实心三角形*/
-        #triangle
-        {
-            width: 200px;
-            height: 80px;
-            border-radius: 5px;
-            background: #333;
-            position: relative;
-        }
-        #triangle:after
-        {
-            content: "";
-            border: 10px solid transparent;
-            border-left-color: #333;
-            position: absolute;
-            left: 100%;
-            top:30%;
-        }
-        /*空心三角形*/
-        #empty
-        {
-            width: 200px;
-            height: 80px;
-            background: #fff;
-            border: 2px solid #333;
-            border-radius: 5px;
-            position: relative;
-        }
-        /*大三角形*/
-        #empty:before
-        {
-            content: "";
-            border: 10px solid transparent;
-            border-left-color: #333;
-            position: absolute;
-            left: 100%;
-            top:25px;
-        }
-        /*小三角形*/
-        #empty:after
-        {
-            content: "";
-            border: 8px solid transparent;
-            border-left-color:#fff;
-            position: absolute;
-            left: 100%;
-            top: 27px;
-        }
-    </style>
-</head>
-<body>
-        <div id="triangle"></div>
-        <div id="empty"></div>
-  
-</body>
-</html>
-</pre>
-
-
-          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>　　今天在技术群里有人在问用css怎么画三角形，所以也就有了这篇小文章，分享用css画三角形的方法，包括实心的和空心的，挺有趣的一个东西，下面我开始介绍这个方法。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>　　画三角形的原理，利用盒子模型，令div宽高为0，设置border为实线，设置大小。四个边分别为四个三角形，我们只需要取其中一个，设置颜色，其它border的颜色设置为透明，这样我们就得到一个三角形。参考下图。<br><img src="/img/sj.png" alt="img"><br>　　从左边到右边，div的宽高逐渐减小，我们可以看到，当宽高为0时，出现了4个三角形，代码我就不贴了。下面我写了个小demo可以做参考。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/css画三角形/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
